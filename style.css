@@ -44,7 +44,7 @@ div#operators{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-end;
     gap: 3px;
     flex:1;
 }

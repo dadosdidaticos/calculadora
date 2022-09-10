@@ -1,0 +1,116 @@
+body{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+span#title{
+    color: white;
+    font-size: 18px;
+    text-align: end;
+    margin: 8px;
+
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+#calculadora{
+    padding: 16px;
+    background-color: blueviolet;
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(50, 1, 95);
+    border-radius: 5px;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#numpad{
+    display: flex;
+}
+div#numbers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 3;
+    gap: 3px;
+}
+
+div#operators{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    flex:1;
+}
+
+div#functions > button{
+    width: 60px;
+    height: 30px;
+}
+
+.ui{
+    border-radius: 5px;
+    border: 2px;
+    border-style: solid;
+    border-top-color: rgb(183, 229, 255);
+    border-left-color: rgb(183, 229, 255);
+    border-bottom-color:rgb(99, 196, 252);
+    border-right-color:rgb(99, 196, 252);
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    flex: 1 0 auto;
+    font-size:16px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    transition: ease-in 100ms;
+    background-color: rgb(252, 252, 252);
+    border-radius: 5px;
+    border: 2px;
+    border-style: solid;
+    border-top-color: rgb(183, 229, 255);
+    border-left-color: rgb(183, 229, 255);
+    border-bottom-color:rgb(99, 196, 252);
+    border-right-color:rgb(99, 196, 252);
+}
+
+button:hover{
+    transform: scale(110%);
+    border-color: rgb(194, 157, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px rgb(254, 254, 255) ;
+
+}
+
+input#display{
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+input#display:focus{
+    outline: none;
+    border-color: rgb(194, 157, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px rgb(254, 254, 255)
+}
+
+div#functions{
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+/* button.function{
+    height: 30px;
+} */

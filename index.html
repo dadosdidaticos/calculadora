@@ -6,33 +6,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <div id="container">
-        <div class="display">
-            <input id="display" type="text">
-
+    <h1>Mini Projeto: Calculadora</h1>
+    <div class="wrapper">
+        <div id="calculadora">
+            <span id="title">CASIO fx 82ms</span> 
+            <div class="display">
+                <input id="display" class="ui"type="text">
+                <div id="functions">
+                    <button id="clear" class="key function">Clear</button>
+                    <button id="backspace" class="key function"><=</button>
+                </div>
+            </div>
+            <div id="numpad">
+                <div id="numbers">
+                    <button class="ui key number">1</button>
+                    <button class="ui key number">2</button>
+                    <button class="ui key number">3</button>
+                    <button class="ui key number">4</button>
+                    <button class="ui key number">5</button>
+                    <button class="ui key number">6</button>
+                    <button class="ui key number">7</button>
+                    <button class="ui key number">8</button>
+                    <button class="ui key number">9</button>
+                    <button class="ui key number">0</button>
+                    <button class="ui key operator">.</button>
+                    <button id="operate" class="ui key function">=</button>
+                </div>
+                <div id="operators">
+                    <button class="ui key operator">+</button>
+                    <button class="ui key operator">-</button>
+                    <button class="ui key operator">*</button>
+                    <button class="ui key operator">/</button>
+                </div>
+            </div>
         </div>
-        <div id="numbers">
-            <button class="key number">0</button>
-            <button class="key number">1</button>
-            <button class="key number">2</button>
-            <button class="key number">3</button>
-            <button class="key number">4</button>
-            <button class="key number">5</button>
-            <button class="key number">6</button>
-            <button class="key number">7</button>
-            <button class="key number">8</button>
-            <button class="key number">9</button>
-        </div>
-        <div id="operators">
-            <button class="key operator">+</button>
-            <button class="key operator">-</button>
-            <button class="key operator">*</button>
-            <button class="key operator">/</button>
-            <button id="operate" class="function">=</button>
-            <button id="clear" class="function">Clear</button>
-        </div>
-
     </div>
     <script src="javascript.js"></script>
     

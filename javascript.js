@@ -60,7 +60,6 @@ function getResult(){
     displayValue=numbers[0]
     for (let i = 1;i<numbers.length;i++){
         displayValue = operate(operators[i-1],parseFloat(displayValue),parseFloat(numbers[i]))
-        console.log(displayValue)
     }
     display.value = displayValue
     displayValue = ''
@@ -71,18 +70,30 @@ function clear(){
     display.value = ''
 }
 
+function popLastInput(){
+    let displayValueArr=displayValue.split('')
+    displayValueArr.pop()
+    displayValue = displayValueArr.join('')
+    display.value = displayValue
+    console.log(displayValue)
+}
+
+function keyboardGetResult(e){
+    e.key=='Enter' ? getResult() : undefined
+}
+
 let numbers=[]
 let operators=[]
-
 let displayValue = ''
-const numberKeys = document.querySelectorAll('.key.number')
-const operatorKeys = document.querySelectorAll('.key.operator')
 
+const operatorKeys = document.querySelectorAll('.key.operator, .key.number')
 const display = document.querySelector('#display')
 const equalKey = document.querySelector('#operate')
 const clearKey = document.querySelector('#clear')
+const backspaceKey = document.querySelector('#backspace')
 
-numberKeys.forEach((key)=> key.addEventListener('click',getKeyValue))
 operatorKeys.forEach((key)=> key.addEventListener('click',getKeyValue))
 clearKey.addEventListener('click',clear)
 equalKey.addEventListener('click',getResult)
+backspaceKey.addEventListener('click',popLastInput)
+document.addEventListener('keypress',keyboardGetResult)
